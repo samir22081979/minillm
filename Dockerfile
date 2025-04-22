@@ -5,3 +5,4 @@ COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 CMD ["python", "embed_api.py"]
+RUN pip install huggingface_hub[hf_xet]
