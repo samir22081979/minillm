@@ -18,6 +18,8 @@ def embed():
     embedding = model.encode(text).tolist()
     return jsonify({"embedding": embedding})
 
+import os
+
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8080))
+    port = int(os.environ.get("PORT", 8080))  # Railway provides PORT env var
     app.run(host="0.0.0.0", port=port)
